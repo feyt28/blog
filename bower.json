@@ -1,0 +1,26 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "authors": [
+    "Maria Odessa P. Cubar <tingcute2000@yahoo.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "data"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.5",
+    "angular-bootstrap": "~0.13.4",
+    "bootstrap": "~3.3.5",
+    "less": "~2.5.1",
+    "angular-ui-router": "~0.2.15"
+  }
+}

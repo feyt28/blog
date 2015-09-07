@@ -1,0 +1,33 @@
+<html data-ng-app="app">
+	<head>
+		<link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="tex/css" />
+		<link href="/less/style.less" rel="stylesheet/less" type="text/css" />
+	</head>
+
+	<body>
+		<div>
+			<header data-ng-include="'/nav/views/nav-bar.html'"></header>
+			<section id="content" class="content container-fluid">
+				<div ui-view></div>
+			</section>
+		</div>
+
+		<script src="/bower_components/angularjs/angular.js"></script>
+		<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="/bower_components/less/dist/less.min.js"></script>
+
+		<script src="/app.module.js"></script>
+		<script src="/app.core.js"></script>
+		<script src="/app.routes.js"></script>
+
+		<!--nav files here-->
+		<script src="/nav/nav.module.js"></script>
+		<script src="/nav/views/nav.ctrl.js"></script>
+		<script src="/nav/factory/nav.factory.js"></script>
+
+	</body>
+
+</html>
