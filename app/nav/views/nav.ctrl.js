@@ -1,10 +1,12 @@
 ( function () {
 	'use strict';
 
-	function NavController ( navFactory ) {
+	function NavController ( $scope, navFactory ) {
 		function activate () {
 			console.log( 'activated' );
-			navFactory.getNavLinks();
+			navFactory.getNavLinks().then( function ( res ) {
+				$scope.nav = res.data;
+			} );
 		}
 
 		activate();
@@ -13,5 +15,5 @@
 	angular.module( 'app.nav' )
 		.controller( 'NavController', NavController );
 
-	NavController.$inject = [ 'navFactory' ];
+	NavController.$inject = [ '$scope', 'navFactory' ];
 } )( );

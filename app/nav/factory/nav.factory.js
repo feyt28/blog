@@ -1,17 +1,26 @@
 ( function () {
 	'use strict';
 
-	function navFactory () {
+	function navFactory ( $http ) {
 
 		function getNavLinks () {
-			console.log( 'getNavLinks in factory' );
+
+			return $http.get( 'http://localhost:8005/nav' )
+				.success( function ( res ) {
+					return res;
+				} )
+				.error( function ( err ) {
+					console.log( err );
+				} );
 		}
 
 		var navMethods = {
-			'getNavLinks' : getNavLinks // TODO: must be invoked since it will be a method for getting data
+			'getNavLinks' : getNavLinks
 		};
 
 		return navMethods;
 	}
 	angular.module( 'app.nav' ).factory( 'navFactory', navFactory );
+
+	navFactory.$inject = [ '$http' ];
 } )( );
