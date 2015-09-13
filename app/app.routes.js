@@ -8,6 +8,16 @@
 			.state( 'home', {
 				'url'         : '/',
 				'templateUrl' : '/home/home.html'
+			} )
+			.state( 'articles', {
+				'url'          : '/articles',
+				'templateUrl'  : '/articles/articles.html',
+				'controller'   : 'ArticlesController',
+				'controllerAs' : 'vm'
+			} )
+			.state( 'about', {
+				'url'         : '/about',
+				'templateUrl' : '/about/about.html'
 			} );
 	}
 

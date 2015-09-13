@@ -1,3 +1,13 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" data-ng-controller="NavController as vm">
-	<span class="navbar-brand">MAO</span>
+<nav class="navbar-inverse navbar-fixed-top" data-ng-controller="NavController as vm">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		  	<span class="navbar-brand">MAO</span>
+		</div>
+
+    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li data-ng-repeat="link in vm.nav"><a ui-sref="{{link.state}}">{{link.title}} <span class="sr-only">(current)</span></a></li>
+			</ul>
+    	</div>
+  	</div>
 </nav>

@@ -2,10 +2,11 @@
 	'use strict';
 
 	function NavController ( $scope, navFactory ) {
+		var self = this;
+
 		function activate () {
-			console.log( 'activated' );
 			navFactory.getNavLinks().then( function ( res ) {
-				$scope.nav = res.data;
+				self.nav = res.data;
 			} );
 		}
 
