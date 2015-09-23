@@ -11,7 +11,7 @@
 			} )
 			.state( 'articles', {
 				'url'          : '/articles',
-				'templateUrl'  : '/articles/articles.html',
+				'templateUrl'  : '/articles/views/articles.html',
 				'controller'   : 'ArticlesController',
 				'controllerAs' : 'vm'
 			} )

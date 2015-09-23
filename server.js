@@ -35,7 +35,8 @@ app.use( morgan( 'dev' ) );
 app.use( '/bower_components', express.static( 'bower_components' ) );
 app.use( '/api', express.static( 'api' ) );
 
-require( './api/nav.api' )( app );
+require( './api/nav.api', './api/articles.api' )( app );
+require( './api/articles.api' )( app );
 
 app.listen( port );
 
