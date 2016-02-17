@@ -4,8 +4,8 @@
 	angular.module( 'app', [
 		'app.core',
 		'app.routes',
-		'app.nav',
-		'app.articles'
+		// 'app.nav',
+		// 'app.articles'
 	] );
 
 } )( );

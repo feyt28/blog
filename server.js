@@ -8,9 +8,10 @@ var bodyParser     = require( 'body-parser' );
 var methodOverride = require( 'method-override' );
 var db             = require( './config/config' );
 
+
 mongoose.connect( db.url , function ( err ) {
 	if ( err ) {
-		console.log( err );
+		console.log( db );
 	} else {
 		console.log( 'Connection successful' );
 	}
@@ -35,7 +36,7 @@ app.use( morgan( 'dev' ) );
 app.use( '/bower_components', express.static( 'bower_components' ) );
 app.use( '/api', express.static( 'api' ) );
 
-require( './api/nav.api', './api/articles.api' )( app );
+require( './api/nav.api' )( app );
 require( './api/articles.api' )( app );
 
 app.listen( port );

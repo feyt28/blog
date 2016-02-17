@@ -6,7 +6,7 @@
 
 	<body>
 		<div>
-			<header data-ng-include="'/nav/views/nav-bar.html'"></header>
+			<!--<header data-ng-include="'/nav/views/nav-bar.html'"></header>-->
 			<section id="content" class="content container-fluid">
 				<div ui-view></div>
 			</section>
@@ -23,15 +23,21 @@
 		<script src="/app.core.js"></script>
 		<script src="/app.routes.js"></script>
 
+		<script src="/home/home.controller.js"></script>
+		<script src="/home/sample-directive.directive.js"></script>
+
+
 		<!--nav files here-->
-		<script src="/nav/nav.module.js"></script>
+<!--		<script src="/nav/nav.module.js"></script>
 		<script src="/nav/views/nav.ctrl.js"></script>
 		<script src="/nav/factory/nav.factory.js"></script>
 
 		<!-- articles files here -->
-		<script src="/articles/articles.module.js"></script>
+<!--		<script src="/articles/articles.module.js"></script>
 		<script src="/articles/views/articles.ctrl.js"></script>
 		<script src="/articles/factory/articles.factory.js"></script>
+
+-->
 	</body>
 
 </html>
